@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Image](./images/ntf-card-screenshot.jpg)
+![Image](./resources/images/ntf-card-screenshot.jpg)
 
 ### Links
 
