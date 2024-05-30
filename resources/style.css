@@ -1,0 +1,135 @@
+:root {
+    --main-background: hsl(217, 54%, 11%);
+    --background-card: hsl(216, 50%, 16%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-soft-blue: hsl(215, 51%, 70%);
+    --color-cyan: hsl(179, 100%, 50%);
+    --color-hr: hsl(215, 32%, 27%);
+}
+
+body {
+    background-color: var(--main-background);
+    font-family: "Outfit", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100svh;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/*Main section*/
+.container {
+    max-width: 20rem;
+    background-color: var(--background-card);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 10px 20px rgb(18, 18, 36), /*Two shadows around div 10px - density, 20px size*/
+    0px 0px 20px 30px rgb(30, 30, 58);
+}
+
+/*Images section*/
+.images {
+    position: relative;    /*One image above another*/
+}
+
+.img-equilibrium { 
+    position: relative; 
+    border-radius: 10px;   
+} 
+
+.icon-view { 
+    width: 20%;
+    position: absolute; 
+    top: 50%; /*Center image in absolute position*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;    
+} 
+
+.images:hover {
+    background: var(--color-cyan); /*Add background above of the image*/
+    border-radius: 10px;
+}
+
+.img-equilibrium:hover {
+    object-fit: cover; /*adjust added background*/
+    opacity: 0.5;
+    cursor: pointer;    
+}
+
+.images:hover .icon-view { 
+    display: block;
+}
+
+.img-ethereum, .img-clock {
+    height: 70%;
+}
+
+.img-avatar {
+    width: 13%;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Information sections*/
+.ethereum, .clock {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.equilibrium_info, .ethereum_clock {
+    color: var(--color-soft-blue);
+    font-weight: 300;
+}
+
+.ethereum_info {
+    color: var(--color-cyan);
+    font-weight: 600;
+}
+
+/*Author's section*/
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author_info {
+    color: var(--color-white);
+}
+
+/*Adjusting elements*/
+h1 {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+hr {
+    border: 1px solid var(--color-hr);
+}
+
+span {
+    color: var(--color-soft-blue);
+}
+
+h1:hover, .author_info:hover {
+    cursor: pointer;
+    color: var(--color-cyan);
+}
+
+/*Footer*/
+.attribution { font-size: 11px; text-align: center; color: var(--color-white);}
+.attribution a { color: hsl(228, 45%, 44%); }
